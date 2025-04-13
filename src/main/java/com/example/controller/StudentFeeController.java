@@ -35,7 +35,7 @@ public class StudentFeeController {
     @GetMapping("/{studentId}")
     public ResponseEntity<List<FeeReceiptDTO>> getAllReceipts(@PathVariable Long studentId){
         logger.info("Retrieving All Student Data!!");
-        return ResponseEntity.status(HttpStatus.FOUND).body(feeService.getAllReceipts(studentId));
+        return ResponseEntity.status(HttpStatus.OK).body(feeService.getAllReceipts(studentId));
     }
 
 }

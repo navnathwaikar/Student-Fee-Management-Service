@@ -14,7 +14,7 @@ public class FeeReceiptDTO {
     private Long referenceId;
     private String cardNumber;
     private String cardType;
-    //private Date date;
-    //private double tuitionFee;
+    private Date date;
+    private double tuitionFee;
     //private Long studentId;
 }
