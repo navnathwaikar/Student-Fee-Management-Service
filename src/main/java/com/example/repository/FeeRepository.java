@@ -10,7 +10,7 @@ import java.util.List;
 
 @Repository
 public interface FeeRepository extends JpaRepository<FeeReceiptEntity, Long> {
-    @Query(value = "select r.reference_Id,r.card_Number,r.card_Type from RECEIPT r where r.student_Id =:studentId", nativeQuery = true)
+    @Query(value = "select r.reference_Id,r.card_Number,r.card_Type,r.date, r.tuition_Fee from RECEIPT r where r.student_Id =:studentId", nativeQuery = true)
     List<FeeReceiptDTO> findAllReceiptByStudentId(Long studentId);
 
 }

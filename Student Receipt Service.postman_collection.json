@@ -1,0 +1,69 @@
+{
+	"info": {
+		"_postman_id": "2032bb75-289a-4d75-a5f1-a809be9b84f5",
+		"name": "Student Receipt Service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "01 - Save Receipt Details",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"cardNumber\" : \"1234-1234-1234-1234\",\r\n    \"cardType\": \"Master Card\",\r\n    \"date\": \"2015-04-14\",\r\n    \"tuitionFee\": \"1.01\",\r\n    \"studentId\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9002/fee-collect",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9002",
+					"path": [
+						"fee-collect"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "02 - Get Receipt Details",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"cardNumber\" : \"1234-1234-1234-1234\",\r\n    \"cardType\": \"Master Card\",\r\n    \"tuitionFee\": \"1.01\",\r\n    \"studentId\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9002/fee-collect/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9002",
+					"path": [
+						"fee-collect",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
